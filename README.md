@@ -9,21 +9,21 @@
 ```bash
 repo/
 ├── README.md                   # 项目说明
-├── cifar10_data/               # 解压后的数据集
+├── cifar10_data/               # 数据集
 ├── figs/                       # 训练过程和参数可视化图像
 ├── saved_models/               # 保存的训练模型
 
 ├── my_model/                   # 模型相关代码包
 │   ├── __init__.py
 │   ├── NeuralNetwork.py        # 网络结构定义
-│   ├── Trainer.py              # 训练逻辑
-│   ├── optimizer.py            # 优化器
-│   ├── evaluate.py             # 评估函数（准确率、损失等）
+│   ├── Trainer.py              # 训练器
+│   ├── optimizer.py            # 优化器（SGD）
+│   ├── evaluate.py             # 评估函数（准确率、损失）
 
 ├── test_train.py               # 训练入口
 ├── test_model.py               # 模型测试入口
 ├── search.py                   # 超参数搜索
-├── weight_visualization.py     # 权重可视化脚本
+├── weight_visualization.py     # 权重可视化
 ├── hyperparam_results.csv      # 超参数搜索记录
 └── train_log.txt               # 训练日志
 ```
@@ -79,7 +79,7 @@ repo/
    再运行测试文件 `test_model.py`：
    ```bash
    python test_model.py
-
+   ```
 
 
 ### 超参数搜索

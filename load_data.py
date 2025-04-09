@@ -1,14 +1,6 @@
 import os
 import pickle
 import numpy as np
-import tarfile
-
-def extract_cifar10(tar_path='cifar-10-python.tar.gz', extract_path='./cifar10_data'):
-    if not os.path.exists(extract_path):
-        os.makedirs(extract_path)
-    with tarfile.open(tar_path, 'r:gz') as tar:
-        tar.extractall(path=extract_path)
-    print("CIFAR-10 解压完成")
 
 def load_cifar_batch(file_path):
     with open(file_path, 'rb') as f:
@@ -40,10 +32,6 @@ def one_hot(y, num_classes=10):
 
 def load_data():
     cifar_folder = './cifar10_data/cifar-10-batches-py'
-    
-    # 若尚未解压则先解压
-    if not os.path.exists(cifar_folder):
-        extract_cifar10()
     
     X_train, y_train, X_test, y_test = load_cifar10(cifar_folder)
 

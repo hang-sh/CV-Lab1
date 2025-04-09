@@ -1,0 +1,6 @@
+[2025-04-09 17:08:51] Test Accuracy: 0.5106
+Model Parameters:
+input: 3072, output: 10
+h1: 512, h2: 64
+activation: leaky_relu
+reg_lambda: 0.001
